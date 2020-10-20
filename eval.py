@@ -5,10 +5,10 @@ import argparse
 parser = argparse.ArgumentParser(description="This script is used to evaluate the performance of Darknet's models.")
 parser.add_argument('--pred', type=str, 
                     default="data/ocr/back_cmtnd_resized/",
-                    help="Path to prediction directory, which should contains all .txt output files predicted by the model.")
+                    help="Path to prediction directory, which should contain all .txt output files predicted by the model.")
 parser.add_argument('--gt', type=str, 
                     default="data/ocr/test/",
-                    help="Path to ground truth directory, which should contains all .txt label files.")
+                    help="Path to ground truth directory, which should contain all .txt label files.")
 # parser.add_argument('--ratio', type=float, 
 #                     default="data/test/",
 #                     help="Ratio used f")
