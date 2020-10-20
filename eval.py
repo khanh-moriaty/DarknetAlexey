@@ -33,11 +33,14 @@ for fi in gt_dir:
     if not os.path.isfile(pred_path): continue
     
     bbox = []
+    check = [True] * 4
     with open(gt_path, 'r') as f:
         lines = f.read().splitlines()
     for line in lines:
         content = line.split()
-        if int(content[0]) not in range(4): continue
+        name = int(content[0])
+        if name not in range(4): continue
+        check[name] = False
         x, y, w, h = [float(x) for x in content[1:]]
         bbox += [
             [x-w/2, y-h/2],
@@ -69,6 +72,7 @@ for fi in gt_dir:
         content = line.split()
         name = int(content[0])
         assert name in range(4), pred_path + " ERROR: invalid class."
+        check[name] = True
         x, y, w, h = [float(x) for x in content[1:]]
         gt = get_gt(x, y)
         if name == gt:
@@ -76,6 +80,10 @@ for fi in gt_dir:
         else:
             FP[name] += 1
             FN[gt] += 1
+    
+    for i, x in enumerate(check):
+        if not x:
+            FN[i] += 1
         
 precision = [tp/(tp+fp) if tp+fp > 0 else 0 for tp, fp in zip(TP, FP)]
 recall = [tp/(tp+fn) if tp+fn > 0 else 0 for tp, fn in zip(TP, FN)]
