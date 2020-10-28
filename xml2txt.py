@@ -101,42 +101,60 @@ def proc_dir(INP_DIR, IMG_DIR, OUT_DIR):
 INP_DIR_LIST = [
     # "/dataset/crawl/front_cmtnd_resized/label/",
     # "/dataset/crawl/back_cmtnd_resized/label/",
-    "/dataset/crawl/front_cccd_resized/label/",
-    "/dataset/crawl/back_cccd_resized/label/",
+    # "/dataset/crawl/front_cccd_resized/label/",
+    # "/dataset/crawl/back_cccd_resized/label/",
     # "/dataset/crawl/hc_resized/label/",
     
     # "/dataset/augmented/front_cmtnd_resized/label/",
     # "/dataset/augmented/back_cmtnd_resized/label/",
-    "/dataset/augmented/front_cccd_resized/label/",
-    "/dataset/augmented/back_cccd_resized/label/",
+    # "/dataset/augmented/front_cccd_resized/label/",
+    # "/dataset/augmented/back_cccd_resized/label/",
     # "/dataset/augmented/hc_resized/label/",
+    
+    "/dataset/test/front_cmtnd_resized/label/",
+    "/dataset/test/back_cmtnd_resized/label/",
+    "/dataset/test/front_cccd_resized/label/",
+    "/dataset/test/back_cccd_resized/label/",
+    "/dataset/test/hc_resized/label/",
 ]
 IMG_DIR_LIST = [
     # "/dataset/crawl/front_cmtnd_resized/image/",
     # "/dataset/crawl/back_cmtnd_resized/image/",
-    "/dataset/crawl/front_cccd_resized/image/",
-    "/dataset/crawl/back_cccd_resized/image/",
+    # "/dataset/crawl/front_cccd_resized/image/",
+    # "/dataset/crawl/back_cccd_resized/image/",
     # "/dataset/crawl/hc_resized/image/",
     
     # "/dataset/augmented/front_cmtnd_resized/image/",
     # "/dataset/augmented/back_cmtnd_resized/image/",
-    "/dataset/augmented/front_cccd_resized/image/",
-    "/dataset/augmented/back_cccd_resized/image/",
+    # "/dataset/augmented/front_cccd_resized/image/",
+    # "/dataset/augmented/back_cccd_resized/image/",
     # "/dataset/augmented/hc_resized/image/",
+    
+    "/dataset/test/front_cmtnd_resized/image/",
+    "/dataset/test/back_cmtnd_resized/image/",
+    "/dataset/test/front_cccd_resized/image/",
+    "/dataset/test/back_cccd_resized/image/",
+    "/dataset/test/hc_resized/image/",
 ]
 
 OUT_DIR_LIST = [
     # "/storage/data/ocr/front_cmtnd_resized/",
     # "/storage/data/ocr/back_cmtnd_resized/",
-    "/storage/data/ocr/front_cccd_resized/",
-    "/storage/data/ocr/back_cccd_resized/",
+    # "/storage/data/ocr/front_cccd_resized/",
+    # "/storage/data/ocr/back_cccd_resized/",
     # "/storage/data/ocr/hc_resized/",
     
     # "/storage/data/ocr/front_cmtnd_resized/",
     # "/storage/data/ocr/back_cmtnd_resized/",
-    "/storage/data/ocr/front_cccd_resized/",
-    "/storage/data/ocr/back_cccd_resized/",
+    # "/storage/data/ocr/front_cccd_resized/",
+    # "/storage/data/ocr/back_cccd_resized/",
     # "/storage/data/ocr/hc_resized/",
+    
+    "/storage/data/ocr/test/front_cmtnd_resized/",
+    "/storage/data/ocr/test/back_cmtnd_resized/",
+    "/storage/data/ocr/test/front_cccd_resized/",
+    "/storage/data/ocr/test/back_cccd_resized/",
+    "/storage/data/ocr/test/hc_resized/",
 ]
 
 for INP_DIR, IMG_DIR, OUT_DIR in zip(INP_DIR_LIST, IMG_DIR_LIST, OUT_DIR_LIST):
