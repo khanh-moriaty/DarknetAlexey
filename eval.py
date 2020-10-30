@@ -28,6 +28,7 @@ TN = [0] * 5
 FN = [0] * 5
 
 for fi in gt_dir:
+    # print(fi)
     gt_path = os.path.join(GT_DIR, fi)
     pred_path = os.path.join(PRED_DIR, fi)
     if not os.path.isfile(pred_path): continue
@@ -48,10 +49,10 @@ for fi in gt_dir:
             [x+w/2, y+h/2],
             [x-w/2, y+h/2],
         ]
-    xmin = min(bbox, key=lambda x: x[0])[0]
-    xmax = max(bbox, key=lambda x: x[0])[0]
-    ymin = min(bbox, key=lambda x: x[1])[1]
-    ymax = max(bbox, key=lambda x: x[1])[1]
+    xmin = min(bbox, key=lambda x: x[0], default=[0,0])[0]
+    xmax = max(bbox, key=lambda x: x[0], default=[1,1])[0]
+    ymin = min(bbox, key=lambda x: x[1], default=[0,0])[1]
+    ymax = max(bbox, key=lambda x: x[1], default=[1,1])[1]
     
     def get_gt(x, y):
         if ymin <= y <= ymin + (ymax - ymin) / 3: 
@@ -92,6 +93,11 @@ avg_precision = sum(precision) / 4
 avg_recall = sum(recall) / 4
 
 print('--RESULT--')
+
+# print(TP)
+# print(FP)
+# print(FN)
+
 for i, (x, y) in enumerate(zip(precision[:-1], recall[:-1])):
     print("precision[{}] = {}".format(i, x))
     print("recall[{}] = {}".format(i, y))
