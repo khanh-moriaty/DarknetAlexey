@@ -31,7 +31,9 @@ for fi in gt_dir:
     # print(fi)
     gt_path = os.path.join(GT_DIR, fi)
     pred_path = os.path.join(PRED_DIR, fi)
-    if not os.path.isfile(pred_path): continue
+    if not os.path.isfile(pred_path): 
+        print('No matching prediction file found: ', fi)
+        continue
     
     bbox = []
     check = [True] * 4
