@@ -10,6 +10,8 @@
 *.lib
 *.dylib
 mnist/
+!data/*.names
+!data/*.data
 data/
 caffe/
 grasp/
@@ -18,6 +20,7 @@ opencv/
 convnet/
 decaf/
 submission/
+!cfg/*.cfg
 cfg/
 build/darknet/*
 build_*/

@@ -9,8 +9,8 @@ CLASSES = [
     'botright',
 ]
 
-INP_DIR = 'data/test/'
-OUT_DIR = 'data/viz/'
+INP_DIR = '/dataset/upload_complete_resized/'
+OUT_DIR = '/dataset/viz/'
 os.makedirs(OUT_DIR, exist_ok=True)
 
 dir = os.listdir(INP_DIR)
