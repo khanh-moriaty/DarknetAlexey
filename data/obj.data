@@ -1,0 +1,5 @@
+classes = 4
+train  = data/ocr/back_cccd_resized/train.txt
+valid  = data/test/test.txt
+names = data/obj.names
+backup = backup/
