@@ -9,7 +9,7 @@ CLASSES = [
     'botright',
 ]
 
-INP_DIR = '/dataset/upload_complete_resized/'
+INP_DIR = '/dataset/thuann_resized/'
 OUT_DIR = '/dataset/viz/'
 os.makedirs(OUT_DIR, exist_ok=True)
 

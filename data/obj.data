@@ -1,5 +1,5 @@
 classes = 4
-train  = data/ocr/back_cccd_resized/train.txt
-valid  = data/test/test.txt
+train  = data/ocr/back_cmtnd_resized/train.txt
+valid  = data/ocr/test/back_cmtnd_resized/train.txt
 names = data/obj.names
 backup = backup/
